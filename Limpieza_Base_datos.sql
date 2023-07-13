@@ -13,6 +13,6 @@ CREATE TABLE IF NOT EXISTS `Penet_Inter_PROV_100HOG`(
 
 LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Penet_Inter_PROV_100HOG.csv'
 INTO TABLE Penet_Inter_PROV_100HOG
-FIELDS TERMINATED BY ',' 
+FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n' 
 IGNORE 1 LINES;
