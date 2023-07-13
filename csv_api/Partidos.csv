@@ -1,0 +1,445 @@
+Partido,id_Partido
+12 de Octubre,0
+1º de Mayo,1
+2 de Abril,2
+25 de Mayo,3
+9 de Julio,4
+ANTARTIDA ARGENTINA,5
+Adolfo Alsina,6
+Adolfo Gonzales Chaves,7
+Aguirre,8
+Albardón,9
+Alberdi,10
+Alberti,11
+Almirante Brown,12
+Aluminé,13
+Ambato,14
+Ancasti,15
+Andalgalá,16
+Angaco,17
+Anta,18
+Antofagasta de la Sierra,19
+Apóstoles,20
+Arauco,21
+Arrecifes,22
+Atamisqui,23
+Atreucó,24
+Avellaneda,25
+Ayacucho,26
+Azul,27
+Añelo,28
+Bahía Blanca,29
+Balcarce,30
+Banda,31
+Baradero,32
+Bariloche,33
+Belgrano,34
+Bella Vista,35
+Belén,36
+Benito Juárez,37
+Berazategui,38
+Berisso,39
+Bermejo,40
+Berón de Astrada,41
+Biedma,42
+Bolívar,43
+Bragado,44
+Brandsen,45
+Burruyacú,46
+COMUNA 01,47
+COMUNA 02,48
+COMUNA 03,49
+COMUNA 04,50
+COMUNA 05,51
+COMUNA 06,52
+COMUNA 07,53
+COMUNA 08,54
+COMUNA 09,55
+COMUNA 10,56
+COMUNA 11,57
+COMUNA 12,58
+COMUNA 13,59
+COMUNA 14,60
+COMUNA 15,61
+Cachi,62
+Cafayate,63
+Cainguás,64
+Calamuchita,65
+Caleu Caleu,66
+Calingasta,67
+Campana,68
+Candelaria,69
+Capayán,70
+Capital,71
+Capitán Sarmiento,72
+Carlos Casares,73
+Carlos Tejedor,74
+Carmen de Areco,75
+Caseros,76
+Castellanos,77
+Castelli,78
+Castro Barros,79
+Catan LilL,80
+Catriló,81
+Caucete,82
+Cañuelas,83
+Cerrillos,84
+Chacabuco,85
+Chalileo,86
+Chamical,87
+Chapaleufú,88
+Chascomús,89
+Chical Co,90
+Chicligasta,91
+Chicoana,92
+Chilecito,93
+Chimbas,94
+Chivilcoy,95
+Chos Malal,96
+Choya,97
+Cochinoca,98
+Collón Curá,99
+Colón,100
+Comandante Fernández,101
+Concepción,102
+Concordia,103
+Conesa,104
+Confluencia,105
+Conhelo,106
+Constitución,107
+Copo,108
+Coronel Dorrego,109
+Coronel Felipe Varela,110
+Coronel Pringles,111
+Coronel Suárez,112
+Coronel de Marina L. Rosales,113
+Corpen Aike,114
+Cruz Alta,115
+Cruz del Eje,116
+Curacó,117
+Curuzú Cuatiá,118
+Cushamen,119
+Daireaux,120
+Deseado,121
+Diamante,122
+Doctor Manuel Belgrano,123
+Dolores,124
+El Alto,125
+El Carmen,126
+El Cuy,127
+Eldorado,128
+Empedrado,129
+Ensenada,130
+Escalante,131
+Escobar,132
+Esquina,133
+Esteban Echeverría,134
+Exaltación de la Cruz,135
+Ezeiza,136
+Famaillá,137
+Famatina,138
+Federación,139
+Federal,140
+Feliciano,141
+Figueroa,142
+Florencio Varela,143
+Florentino Ameghino,144
+Formosa,145
+Fray Justo Santa María de Oro,146
+Fray Mamerto Esquiú,147
+Futaleufú,148
+Gaiman,149
+Garay,150
+Gastre,151
+General Alvarado,152
+General Alvear,153
+General Angel V. Peñaloza,154
+General Arenales,155
+General Belgrano,156
+General Donovan,157
+General Guido,158
+General Güemes,159
+General Juan F. Quiroga,160
+General Juan Madariaga,161
+General La Madrid,162
+General Lamadrid,163
+General Las Heras,164
+General Lavalle,165
+General López,166
+General Manuel Belgrano,167
+General Obligado,168
+General Ocampo,169
+General Paz,170
+General Pedernera,171
+General Pinto,172
+General Pueyrredón,173
+General Roca,174
+General Rodríguez,175
+General San Martín,176
+General Taboada,177
+General Viamonte,178
+General Villegas,179
+Gobernador Dupuy,180
+Godoy Cruz,181
+Goya,182
+Graneros,183
+Grl. José de San Martín,184
+Guachipas,185
+Gualeguay,186
+Gualeguaychú,187
+Guaminí,188
+Guaraní,189
+Guasayán,190
+Guatraché,191
+Guaymallén,192
+Güer Aike,193
+Hipólito Yrigoyen,194
+Hucal,195
+Huiliches,196
+Humahuaca,197
+Hurlingham,198
+Iglesia,199
+Iguazú,200
+Independencia,201
+Iriondo,202
+Iruya,203
+Ischilín,204
+Islas del Ibicuy,205
+ItatÍ,206
+Ituzaingó,207
+Jiménez,208
+José C. Paz,209
+Juan Bautista Alberdi,210
+Juan F. Ibarra,211
+Junín,212
+Juárez Celman,213
+Jáchal,214
+La Caldera,215
+La Candelaria,216
+La Capital,217
+La Cocha,218
+La Costa,219
+La Matanza,220
+La Paz,221
+La Plata,222
+La Poma,223
+La Viña,224
+Lago Argentino,225
+Lago Buenos Aires,226
+Laishi,227
+Languiñeo,228
+Lanús,229
+Laprida,230
+Las Colonias,231
+Las Flores,232
+Las Heras,233
+Lavalle,234
+Leales,235
+Leandro N. Alem,236
+Ledesma,237
+Libertad,238
+Libertador General San Martín,239
+Libertador Grl. San Martín,240
+Lihuel Calel,241
+Limay Mahuida,242
+Lincoln,243
+Lobería,244
+Lobos,245
+Lomas De Zamora,246
+Loncopué,247
+Loreto,248
+Los Andes,249
+Los Lagos,250
+Loventué,251
+Luján,252
+Luján de Cuyo,253
+Lules,254
+Lácar,255
+Magallanes,256
+Magdalena,257
+Maipú,258
+Malargüe,259
+Malvinas Argentinas,260
+Mar Chiquita,261
+Maracó,262
+Marcos Juárez,263
+Marcos Paz,264
+Matacos,265
+Mayor Luis J. Fontana,266
+Mburucuyá,267
+Mercedes,268
+Merlo,269
+Metán,270
+Minas,271
+Mitre,272
+Molinos,273
+Monte,274
+Monte Caseros,275
+Monte Hermoso,276
+Montecarlo,277
+Monteros,278
+Moreno,279
+Morón,280
+Mártires,281
+Navarro,282
+Necochea,283
+Nogoyá,284
+O Higgins,285
+Oberá,286
+Ojo de Agua,287
+Olavarría,288
+Orán,289
+Paclín,290
+Palpalá,291
+Paraná,292
+Paso de Indios,293
+Paso de los Libres,294
+Patagones,295
+Patiño,296
+Pehuajó,297
+Pehuenches,298
+Pellegrini,299
+Pergamino,300
+Pichi Mahuida,301
+Picunches,302
+Picún Leufú,303
+Pila,304
+Pilagás,305
+Pilar,306
+Pilcaniyeu,307
+Pilcomayo,308
+Pinamar,309
+Pirané,310
+Pocho,311
+Pocito,312
+Pomán,313
+Presidencia de la Plaza,314
+Presidente Perón,315
+Presidente Roque Sáenz Peña,316
+Puelén,317
+Punilla,318
+Punta Indio,319
+Puán,320
+Quebrachos,321
+Quemú Quemú,322
+Quilmes,323
+Quitilipi,324
+Ramallo,325
+Ramón Lista,326
+Rancul,327
+Rauch,328
+Rawson,329
+Realicó,330
+Rinconada,331
+Rivadavia,332
+Robles,333
+Rojas,334
+Roque Pérez,335
+Rosario,336
+Rosario Vera Peñaloza,337
+Rosario de Lerma,338
+Rosario de la Frontera,339
+Río Chico,340
+Río Cuarto,341
+Río Grande,342
+Río Hondo,343
+Río Primero,344
+Río Seco,345
+Río Segundo,346
+Río Senguer,347
+SANTA BARBARA,348
+Saavedra,349
+Saladas,350
+Saladillo,351
+Salavina,352
+Salliqueló,353
+Salto,354
+San Alberto,355
+San Andrés de Giles,356
+San Antonio,357
+San Antonio de Areco,358
+San Blas de los Sauces,359
+San Carlos,360
+San Cayetano,361
+San Cosme,362
+San Cristóbal,363
+San Fernando,364
+San Ignacio,365
+San Isidro,366
+San Javier,367
+San Jerónimo,368
+San Justo,369
+San Lorenzo,370
+San Luis del Palmar,371
+San Martín,372
+San Miguel,373
+San Nicolás,374
+San Pedro,375
+San Rafael,376
+San Roque,377
+San Salvador,378
+San Vicente,379
+Sanagasta,380
+Santa Catalina,381
+Santa Lucía,382
+Santa María,383
+Santa Rosa,384
+Santa Victoria,385
+Santo Tomé,386
+Sargento Cabral,387
+Sarmiento,388
+Sauce,389
+Silípica,390
+Simoca,391
+Sobremonte,392
+Suipacha,393
+Susques,394
+Tafí Viejo,395
+Tafí del Valle,396
+Tala,397
+Tandil,398
+Tapalqué,399
+Tapenagá,400
+Tehuelches,401
+Telsen,402
+Tercero Arriba,403
+Tigre,404
+Tilcara,405
+Tinogasta,406
+Toay,407
+Tordillo,408
+Tornquist,409
+Totoral,410
+Trancas,411
+Trenel,412
+Trenque Lauquen,413
+Tres Arroyos,414
+Tres De Febrero,415
+Tres Lomas,416
+Tulumba,417
+Tumbaya,418
+Tunuyán,419
+Tupungato,420
+Ullum,421
+Unión,422
+Uruguay,423
+Ushuaia,424
+Utracán,425
+Valcheta,426
+Valle Fértil,427
+Valle Grande,428
+Valle Viejo,429
+Vera,430
+Vicente López,431
+Victoria,432
+Villa Gesell,433
+Villaguay,434
+Villarino,435
+Vinchina,436
+Yavi,437
+Yerba Buena,438
+Zapala,439
+Zonda,440
+Zárate,441
+Ñorquincó,442
+Ñorquín,443
