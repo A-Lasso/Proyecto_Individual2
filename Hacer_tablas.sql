@@ -1,14 +1,9 @@
-
 Drop database IF EXISTS Proyecto2;
 SET GLOBAL local_infile = 1;
 
 CREATE DATABASE IF NOT EXISTS Proyecto2;
 USE Proyecto2;
-/*
-CREATE TABLE IF NOT EXISTS `Provincias`
 
-;
-*/
 CREATE TABLE IF NOT EXISTS `Penet_Inter_PROV_100HOG`(
 `Año`INT,
 `Trimestre`INT,
@@ -21,6 +16,3 @@ INTO TABLE Penet_Inter_PROV_100HOG
 FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
 LINES TERMINATED BY '\n' 
 IGNORE 1 LINES;
-/*
-CREATE TABLE IF NOT EXISTS ``
-*/
