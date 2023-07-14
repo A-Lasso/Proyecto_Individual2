@@ -40,11 +40,10 @@ LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
 
-
 CREATE TABLE IF NOT EXISTS `Penet_Inter_PROV_100HOG`(
 `Año`INT,
 `Trimestre`INT,
-`Accesos por cada 100 hogares`VARCHAR(150),
+`Accesos por cada 100 hogares`VARCHAR(20),
 `id_Provincia` INT,
 FOREIGN KEY (`id_Provincia`) REFERENCES `Provincias`(`id_Provincia`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
@@ -59,6 +58,34 @@ UPDATE Penet_Inter_PROV_100HOG SET `Accesos por cada 100 hogares` = REPLACE(`Acc
 ALTER TABLE `Penet_Inter_PROV_100HOG` CHANGE `Accesos por cada 100 hogares` `Accesos por cada 100 hogares` DECIMAL(10,3);
 
 
+CREATE TABLE IF NOT EXISTS `Penet_Inter_Nac`(
+Año INT,
+Trimestre INT,
+`Accesos por cada 100 hogares` VARCHAR(20),
+`Accesos por cada 100 hab` VARCHAR(20),
+Periodo VARCHAR(100)
+);
+LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Penet_Inter_Nac.csv'
+INTO TABLE `Penet_Inter_Nac`
+FIELDS TERMINATED BY ',' ENCLOSED BY '"' 
+LINES TERMINATED BY '\n' 
+IGNORE 1 LINES;
+
+UPDATE Penet_Inter_Nac SET `Accesos por cada 100 hogares` = REPLACE(`Accesos por cada 100 hogares`,',','.');
+ALTER TABLE Penet_Inter_Nac CHANGE `Accesos por cada 100 hogares` `Accesos por cada 100 hogares` DECIMAL(10,3);
+
+UPDATE Penet_Inter_Nac SET `Accesos por cada 100 hab` = REPLACE(`Accesos por cada 100 hab`,',','.');
+ALTER TABLE Penet_Inter_Nac CHANGE `Accesos por cada 100 hab` `Accesos por cada 100 hab` DECIMAL(10,3);
+
 /*
-CREATE TABLE IF NOT EXISTS ``
+CREATE TABLE IF NOT EXISTS `Acces_Banda_Ancha_Angosta_Nac`(
+Año,Trimestre,Banda ancha fija,Dial up,Total,Periodo
+);
+LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Acces_Banda_Ancha_Angosta_Nac.csv'
+INTO TABLE `Acces_Banda_Ancha_Angosta_Nac`
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n' 
+IGNORE 1 LINES;
 */
+
+
