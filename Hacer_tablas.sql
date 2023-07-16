@@ -170,15 +170,30 @@ LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
 
-/*
-CREATE TABLE IF NOT EXISTS ``(
+
+CREATE TABLE IF NOT EXISTS `Acces_Inter_VelBajada_Localidad`(
+id_Provincia INT,
+id_Localidad INT,
+id_Partido INT,
+`Link Indec` INT,
+`<0.512 mbps` INT,
+`0.512 - 1 Mbps` INT,
+`1 - 6 Mbps` INT,
+`6 - 10 Mbps` INT,
+`10 - 20 Mbps` INT,
+`20 - 30 Mbps` INT,
+`>=30 Mbps` INT,
+Otros INT,
+FOREIGN KEY (`id_Provincia`) REFERENCES `Provincias`(`id_Provincia`),
+FOREIGN KEY (`id_Partido`) REFERENCES `Partidos`(`id_Partido`),
+FOREIGN KEY (`id_Localidad`) REFERENCES `Localidades`(`id_Localidad`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\.csv'
-INTO TABLE ``
+LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Acces_Inter_VelBajada_Localidad.csv'
+INTO TABLE `Acces_Inter_VelBajada_Localidad`
 FIELDS TERMINATED BY ',' 
 LINES TERMINATED BY '\n' 
 IGNORE 1 LINES;
-*/
+
 
 /*
 CREATE TABLE IF NOT EXISTS ``(
