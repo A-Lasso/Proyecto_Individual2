@@ -195,32 +195,77 @@ LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
 
-/*
-CREATE TABLE IF NOT EXISTS ``(
-)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\.csv'
-INTO TABLE ``
-FIELDS TERMINATED BY ',' 
-LINES TERMINATED BY '\n' 
-IGNORE 1 LINES;
-*/
 
-/*
-CREATE TABLE IF NOT EXISTS ``(
+CREATE TABLE IF NOT EXISTS `Conectividad_Localidad`(
+id_Provincia INT,
+id_Localidad INT,
+id_Partido INT,
+Poblacion INT,
+ADSL INT,
+CABLEMODEM INT,
+DIALUP INT,
+FIBRAOPTICA INT,
+SATELITAL INT,
+WIRELESS INT,
+TELEFONIAFIJA INT,
+3G INT,
+4G INT,
+link INT,
+Latitud DECIMAL(18,13),
+Longitud DECIMAL(18,13),
+FOREIGN KEY (`id_Provincia`) REFERENCES `Provincias`(`id_Provincia`),
+FOREIGN KEY (`id_Partido`) REFERENCES `Partidos`(`id_Partido`),
+FOREIGN KEY (`id_Localidad`) REFERENCES `Localidades`(`id_Localidad`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\.csv'
-INTO TABLE ``
+LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Conectividad_Localidad.csv'
+INTO TABLE `Conectividad_Localidad`
 FIELDS TERMINATED BY ',' 
 LINES TERMINATED BY '\n' 
 IGNORE 1 LINES;
-*/
 
-/*
-CREATE TABLE IF NOT EXISTS ``(
+CREATE TABLE IF NOT EXISTS `Ingresos_Inter_Fijo`(
+Año INT,
+Trimestre INT,
+`Ingresos (miles de pesos)` INT,
+Periodo VARCHAR(20)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\.csv'
-INTO TABLE ``
+LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Ingresos_Inter_Fijo.csv'
+INTO TABLE `Ingresos_Inter_Fijo`
 FIELDS TERMINATED BY ',' 
 LINES TERMINATED BY '\n' 
 IGNORE 1 LINES;
-*/
+
+CREATE TABLE IF NOT EXISTS `Vel_MedBajada_Nac`(
+Año INT,
+Trimestre INT,
+`Mbps (Media de bajada)` FLOAT,
+Periodo VARCHAR(20)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Vel_MedBajada_Nac.csv'
+INTO TABLE `Vel_MedBajada_Nac`
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n' 
+IGNORE 1 LINES;
+
+CREATE TABLE `Dolar`(
+Año INT,
+`Variacion_Porcentaje(ultimo_mes)` FLOAT,
+ENE DECIMAL(6,2),
+FEB DECIMAL(6,2),
+MAR DECIMAL(6,2),
+ABR DECIMAL(6,2),
+MAY DECIMAL(6,2),
+JUN DECIMAL(6,2),
+JUL DECIMAL(6,2),
+AGO DECIMAL(6,2),
+SEP DECIMAL(6,2),
+OCT DECIMAL(6,2),
+NOV DECIMAL(6,2),
+DIC DECIMAL(6,2)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\dolar.csv'
+INTO TABLE `Dolar`
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n' 
+IGNORE 1 LINES;
