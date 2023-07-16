@@ -87,12 +87,12 @@ IGNORE 1 LINES;
 
 
 CREATE TABLE IF NOT EXISTS `Acces_Banda_Ancha_Angosta_Provincia`(
+id_Provincia INT,
 Año INT, 
 Trimestre INT,
 `Banda ancha fija` INT,
 `Dial up` INT,
 `Total` INT,
-id_Provincia INT,
 FOREIGN KEY (`id_Provincia`) REFERENCES `Provincias`(`id_Provincia`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Acces_Banda_Ancha_Angosta_Provincia.csv'
@@ -101,41 +101,74 @@ FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n' 
 IGNORE 1 LINES;
 
-/*
-CREATE TABLE IF NOT EXISTS ``(
-Año,
-Trimestre,
-Provincia,
-Banda ancha fija,
-Dial up,T
-otal
-)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Acces_Banda_Ancha_Angosta_Provincia.csv'
-INTO TABLE ``
-FIELDS TERMINATED BY ',' 
-LINES TERMINATED BY '\n' 
-IGNORE 1 LINES;
-*/
 
-/*
-CREATE TABLE IF NOT EXISTS ``(
+CREATE TABLE IF NOT EXISTS `Acces_Inter_Localidades`(
+id_Provincia INT,
+id_Partido INT,
+id_Localidad INT,
+ADSL INT,
+CABLEMODEM INT,
+DIALUP INT,
+FIBRAOPTICA INT,
+4G INT,
+3G INT,
+TELEFONIAFIJA INT,
+WIRELESS INT,
+SATELITAL INT,
+FOREIGN KEY (`id_Provincia`) REFERENCES `Provincias`(`id_Provincia`),
+FOREIGN KEY (`id_Partido`) REFERENCES `Partidos`(`id_Partido`),
+FOREIGN KEY (`id_Localidad`) REFERENCES `Localidades`(`id_Localidad`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\.csv'
-INTO TABLE ``
+LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Acces_Inter_Localidades.csv'
+INTO TABLE `Acces_Inter_Localidades`
 FIELDS TERMINATED BY ',' 
 LINES TERMINATED BY '\n' 
 IGNORE 1 LINES;
-*/
 
-/*
-CREATE TABLE IF NOT EXISTS ``(
+
+
+CREATE TABLE IF NOT EXISTS `Acces_Inter_Prov_Vel`(
+Año INT,
+Trimestre INT,
+id_Provincia INT,
+`<0.512 mbps` INT,
+`0.512 - 1 Mbps` INT,
+`1 - 6 Mbps` INT,
+`6 - 10 Mbps` INT,
+`10 - 20 Mbps` INT,
+`20 - 30 Mbps` INT,
+`>=30 Mbps` INT,
+Otros INT,
+Total INT,
+Total_Nuevo INT,
+Diferencia INT,
+FOREIGN KEY (`id_Provincia`) REFERENCES `Provincias`(`id_Provincia`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\.csv'
-INTO TABLE ``
+LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Acces_Inter_Prov_Vel.csv'
+INTO TABLE `Acces_Inter_Prov_Vel`
 FIELDS TERMINATED BY ',' 
 LINES TERMINATED BY '\n' 
 IGNORE 1 LINES;
-*/
+
+
+
+CREATE TABLE IF NOT EXISTS `Acces_Inter_Tec_Nac`(
+Año INT,
+Trimestre INT,
+ADSL INT,
+Cablemodem INT,
+`Fibra óptica` INT,
+Wireless INT,
+Otros INT,
+Total INT,
+Periodo VARCHAR(20)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Acces_Inter_Tec_Nac.csv'
+INTO TABLE `Acces_Inter_Tec_Nac`
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n' 
+IGNORE 1 LINES;
+
 
 /*
 CREATE TABLE IF NOT EXISTS ``(
