@@ -227,7 +227,9 @@ CREATE TABLE IF NOT EXISTS `Ingresos_Inter_Fijo`(
 Año INT,
 Trimestre INT,
 `Ingresos (miles de pesos)` INT,
-Periodo VARCHAR(20)
+Periodo VARCHAR(20),
+dolar FLOAT,
+`Ingreso en dolares` DECIMAL(18,11)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Ingresos_Inter_Fijo.csv'
 INTO TABLE `Ingresos_Inter_Fijo`
@@ -247,25 +249,17 @@ FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n' 
 IGNORE 1 LINES;
 
-CREATE TABLE `Dolar`(
-Año INT,
-`Variacion_Porcentaje(ultimo_mes)` FLOAT,
-ENE DECIMAL(6,2),
-FEB DECIMAL(6,2),
-MAR DECIMAL(6,2),
-ABR DECIMAL(6,2),
-MAY DECIMAL(6,2),
-JUN DECIMAL(6,2),
-JUL DECIMAL(6,2),
-AGO DECIMAL(6,2),
-SEP DECIMAL(6,2),
-OCT DECIMAL(6,2),
-NOV DECIMAL(6,2),
-DIC DECIMAL(6,2)
+CREATE TABLE IF NOT EXISTS `TodosLosId`(
+id_Provincia INT,
+id_Partido INT,
+id_Localidad int,
+FOREIGN KEY (`id_Provincia`) REFERENCES `Provincias`(`id_Provincia`),
+FOREIGN KEY (`id_Partido`) REFERENCES `Partidos`(`id_Partido`),
+FOREIGN KEY (`id_Localidad`) REFERENCES `Localidades`(`id_Localidad`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-
-LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\dolar.csv'
-INTO TABLE `Dolar`
+LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\TodosLosId.csv'
+INTO TABLE `TodosLosId`
 FIELDS TERMINATED BY ',' 
 LINES TERMINATED BY '\n' 
 IGNORE 1 LINES;
+
