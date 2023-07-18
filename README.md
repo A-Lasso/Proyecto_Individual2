@@ -25,4 +25,4 @@ Carpeta con todos los dataset que se usan en todo el proyecto. Los de la API ya 
 ## **Imagenes**
 Carpeta que contiene imagenes que se utilizan en "EDA.ipynb", estas son graficos generados por pandas_profiling. No todos los analisis/graficos fueron hechos con pandas profiling.
 
-El Readme debe incluir un reporte de análisis con base en sus dashboards, así como el análisis y la funcionalidad de los KPIs sugeridos.
+**El Readme debe incluir un reporte de análisis con base en sus dashboards, así como el análisis y la funcionalidad de los KPIs sugeridos.**
