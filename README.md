@@ -11,7 +11,10 @@ En este contexto, una empresa prestadora de servicios de telecomunicaciones me e
 En este archivo se encuentra:la importación de los csv desde la API, la limpieza de los datos de cada dataset traido por la API, la creación de nuevos dataset para más adelante la relación entre estos.<br>
 Con la creación de los csv que contienen los id de cada lugar, se creo en cada dataset (que tuviera justamente columnas de categorias de lugares ) un id representando cada lugar y luego se eliminaron las columnas que tenian los valores en string.<br>
 Para esto antes se verifico que cada uno de los dataset tuviera los mismos valores en estas columnas, y para el caso de las provincias se tuvo que reemplazar los valores para 3 datasets distintos. En el caso de Localidades y Partidos no se tuvo que hacer ningún reemplazo, pero si el dataset "Acces_Inter_VelBajada_Localidad" contenia más localidades y partidos que los otros dos dataset con esta información, asi que simplemente se agregaron estos valores nuevos con sus propios id's.<br>
-Con el analisis de cada dataset de nulos y valores se fue anotando las cosas por hacer. Para evitar conflictos en el formato csv que podría generar mysql se hace todo en el archivo ETL.ipynb.
+Con el analisis de cada dataset de nulos y valores se fue anotando las cosas por hacer. Para evitar conflictos en el formato csv que podría generar mysql se hace todo en el archivo ETL.ipynb.<br>
+Se tuvieron que cambiar los "." por vacio en varios dataset y "," por ".", para que detectara el numero int/float. En la mayoria al corroborar el total quedaba de igual manera, en otros se decidio tomar el nuevo total de los nuevos numeros para que la suma sea la correcta.<br>
+En la mayoria de datasets se reordenaron los datos para más prolijidad.<br>
+Se genero el dataset con todos los id's de ubicación geografica, para tener bien los datos respecto a qué partido pertenece una localidad y a qué provincia un partido.
 
 ## **Archivos sql**
 Se crearon tablas para importar los csv y hacer las conexiones entre las tablas (Foreign key y primary key) asi luego se exporta el database de mysql a Power BI y que ya quede con sus debidas conexiones.<br>
