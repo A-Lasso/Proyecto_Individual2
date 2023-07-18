@@ -22,4 +22,7 @@ Analisis de las relaciones de los datos con los csv ya procesados, viendo la rel
 ## **csv_api**
 Carpeta con todos los dataset que se usan en todo el proyecto. Los de la API ya se encuentran tratados. Los que agregue yo es para conexiones entre estos dataset de la API.
 
+## **imagenes**
+Carpeta que contiene imagenes que se utilizan en "EDA.ipynb", estas son graficos generados por pandas_profiling. No todos los analisis/graficos fueron hechos con pandas profiling.
+
 El Readme debe incluir un reporte de análisis con base en sus dashboards, así como el análisis y la funcionalidad de los KPIs sugeridos.

@@ -3,6 +3,15 @@ Drop database IF EXISTS Proyecto2;
 CREATE DATABASE IF NOT EXISTS Proyecto2;
 USE Proyecto2;
 
+CREATE TABLE IF NOT EXISTS `Años`(
+`Años` INT,
+PRIMARY KEY (`Años`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+INSERT INTO `Años`(`Años`) 
+VALUES (2014),(2015),(2016),(2017),(2018),(2019),(2020),(2021),(2022),(2023);
+
+
 CREATE TABLE IF NOT EXISTS `Provincias`(
 `Provincia` Varchar(100),
 `id_Provincia` INT,
@@ -45,7 +54,8 @@ CREATE TABLE IF NOT EXISTS `Penet_Inter_PROV_100HOG`(
 `Trimestre`INT,
 `Accesos por cada 100 hogares`FLOAT,
 `id_Provincia` INT,
-FOREIGN KEY (`id_Provincia`) REFERENCES `Provincias`(`id_Provincia`)
+FOREIGN KEY (`id_Provincia`) REFERENCES `Provincias`(`id_Provincia`),
+FOREIGN KEY (`Año`) REFERENCES `Año`(`Año`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Penet_Inter_PROV_100HOG.csv'
@@ -61,7 +71,8 @@ Año INT,
 Trimestre INT,
 `Accesos por cada 100 hogares` FLOAT,
 `Accesos por cada 100 hab` FLOAT,
-Periodo VARCHAR(100)
+Periodo VARCHAR(100),
+FOREIGN KEY (`Año`) REFERENCES `Año`(`Año`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Penet_Inter_Nac.csv'
 INTO TABLE `Penet_Inter_Nac`
@@ -77,7 +88,8 @@ Trimestre INT,
 `Banda ancha fija` INT,
 `Dial up` INT,
 Total INT,
-Periodo VARCHAR(20)
+Periodo VARCHAR(20),
+FOREIGN KEY (`Año`) REFERENCES `Año`(`Año`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Acces_Banda_Ancha_Angosta_Nac.csv'
 INTO TABLE `Acces_Banda_Ancha_Angosta_Nac`
@@ -93,38 +105,14 @@ Trimestre INT,
 `Banda ancha fija` INT,
 `Dial up` INT,
 `Total` INT,
-FOREIGN KEY (`id_Provincia`) REFERENCES `Provincias`(`id_Provincia`)
+FOREIGN KEY (`id_Provincia`) REFERENCES `Provincias`(`id_Provincia`),
+FOREIGN KEY (`Año`) REFERENCES `Año`(`Año`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Acces_Banda_Ancha_Angosta_Provincia.csv'
 INTO TABLE `Acces_Banda_Ancha_Angosta_Provincia`
 FIELDS TERMINATED BY ',' 
 LINES TERMINATED BY '\n' 
 IGNORE 1 LINES;
-
-
-CREATE TABLE IF NOT EXISTS `Acces_Inter_Localidades`(
-id_Provincia INT,
-id_Partido INT,
-id_Localidad INT,
-ADSL INT,
-CABLEMODEM INT,
-DIALUP INT,
-FIBRAOPTICA INT,
-4G INT,
-3G INT,
-TELEFONIAFIJA INT,
-WIRELESS INT,
-SATELITAL INT,
-FOREIGN KEY (`id_Provincia`) REFERENCES `Provincias`(`id_Provincia`),
-FOREIGN KEY (`id_Partido`) REFERENCES `Partidos`(`id_Partido`),
-FOREIGN KEY (`id_Localidad`) REFERENCES `Localidades`(`id_Localidad`)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Acces_Inter_Localidades.csv'
-INTO TABLE `Acces_Inter_Localidades`
-FIELDS TERMINATED BY ',' 
-LINES TERMINATED BY '\n' 
-IGNORE 1 LINES;
-
 
 
 CREATE TABLE IF NOT EXISTS `Acces_Inter_Prov_Vel`(
@@ -142,7 +130,8 @@ Otros INT,
 Total INT,
 Total_Nuevo INT,
 Diferencia INT,
-FOREIGN KEY (`id_Provincia`) REFERENCES `Provincias`(`id_Provincia`)
+FOREIGN KEY (`id_Provincia`) REFERENCES `Provincias`(`id_Provincia`),
+FOREIGN KEY (`Año`) REFERENCES `Año`(`Año`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Acces_Inter_Prov_Vel.csv'
 INTO TABLE `Acces_Inter_Prov_Vel`
@@ -161,7 +150,8 @@ Cablemodem INT,
 Wireless INT,
 Otros INT,
 Total INT,
-Periodo VARCHAR(20)
+Periodo VARCHAR(20),
+FOREIGN KEY (`Año`) REFERENCES `Año`(`Año`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Acces_Inter_Tec_Nac.csv'
 INTO TABLE `Acces_Inter_Tec_Nac`
@@ -173,8 +163,8 @@ IGNORE 1 LINES;
 
 CREATE TABLE IF NOT EXISTS `Acces_Inter_VelBajada_Localidad`(
 id_Provincia INT,
-id_Localidad INT,
 id_Partido INT,
+id_Localidad INT,
 `Link Indec` INT,
 `<0.512 mbps` INT,
 `0.512 - 1 Mbps` INT,
@@ -184,6 +174,7 @@ id_Partido INT,
 `20 - 30 Mbps` INT,
 `>=30 Mbps` INT,
 Otros INT,
+Total INT,
 FOREIGN KEY (`id_Provincia`) REFERENCES `Provincias`(`id_Provincia`),
 FOREIGN KEY (`id_Partido`) REFERENCES `Partidos`(`id_Partido`),
 FOREIGN KEY (`id_Localidad`) REFERENCES `Localidades`(`id_Localidad`)
@@ -228,8 +219,9 @@ Año INT,
 Trimestre INT,
 `Ingresos (miles de pesos)` INT,
 Periodo VARCHAR(20),
-dolar FLOAT,
-`Ingreso en dolares` DECIMAL(18,11)
+dolar DECIMAL(5,2),
+`Ingreso en dolares` DECIMAL(18,11),
+FOREIGN KEY (`Año`) REFERENCES `Año`(`Año`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Ingresos_Inter_Fijo.csv'
 INTO TABLE `Ingresos_Inter_Fijo`
@@ -241,7 +233,8 @@ CREATE TABLE IF NOT EXISTS `Vel_MedBajada_Nac`(
 Año INT,
 Trimestre INT,
 `Mbps (Media de bajada)` FLOAT,
-Periodo VARCHAR(20)
+Periodo VARCHAR(20),
+FOREIGN KEY (`Año`) REFERENCES `Año`(`Año`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 LOAD DATA INFILE 'D:\\Programacion\\DataScience_Henry\\Proyecto_Individual2\\csv_api\\Vel_MedBajada_Nac.csv'
 INTO TABLE `Vel_MedBajada_Nac`
@@ -262,4 +255,3 @@ INTO TABLE `TodosLosId`
 FIELDS TERMINATED BY ',' 
 LINES TERMINATED BY '\n' 
 IGNORE 1 LINES;
-
