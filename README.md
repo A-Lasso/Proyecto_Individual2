@@ -36,7 +36,7 @@ Carpeta que contiene imagenes que se utilizan en "EDA.ipynb", estas son graficos
 <br>
 
 Con estos graficos se puede ver el poco ingreso que tiene la empresa habiendo regulado la moneda trimestralmente con la del dolar.<br>
-Se aprecia una comparación en el efecto de cada acceso de velocidad de bajada de internet con el total. Es decir la cantidad de conexiones que hay por cada velocidad de bajada (clientes con la velocidad contratada). Mostrando una vez más lo visto en el EDA: La supremacia de las conexiones 4G, seguidas por conexiones tipo wireless y telefonia fija.<br>
+Se aprecia la cantidad de conexiones que hay por cada tecnología. Mostrando una vez más lo visto en el EDA: La supremacia de las conexiones 4G, seguidas por conexiones tipo wireless y telefonia fija.<br>
 
 
 ### KPI's
