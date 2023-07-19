@@ -28,7 +28,6 @@ Carpeta con todos los dataset que se usan en todo el proyecto. Los de la API ya 
 ## **Imagenes**
 Carpeta que contiene imagenes que se utilizan en "EDA.ipynb", estas son graficos generados por pandas_profiling. No todos los analisis/graficos fueron hechos con pandas profiling.
 
-**El Readme debe incluir un reporte de análisis con base en sus dashboards, así como el análisis y la funcionalidad de los KPIs sugeridos.**
 ## Dashboard
 
 <p align="center">
@@ -39,7 +38,7 @@ Con estos graficos se puede ver el poco ingreso que tiene la empresa habiendo re
 Se aprecia una comparación en el efecto de cada acceso de velocidad de bajada de internet con el total. Es decir la cantidad de conexiones que hay por cada velocidad de bajada (clientes con la velocidad contratada). Mostrando una vez más lo visto en el EDA: La supremacia de las conexiones 4G, seguidas por conexiones tipo wireless y telefonia fija.<br>
 
 
-## KPI's
+### KPI's
 
 <p align="center">
 <img src=imagenes\Kpi.png >
