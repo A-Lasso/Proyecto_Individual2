@@ -32,7 +32,8 @@ Carpeta que contiene imagenes que se utilizan en "EDA.ipynb", estas son graficos
 
 <p align="center">
 <img src=imagenes\dashboard.png >
-</p><br>
+</p>
+<br>
 
 Con estos graficos se puede ver el poco ingreso que tiene la empresa habiendo regulado la moneda trimestralmente con la del dolar.<br>
 Se aprecia una comparación en el efecto de cada acceso de velocidad de bajada de internet con el total. Es decir la cantidad de conexiones que hay por cada velocidad de bajada (clientes con la velocidad contratada). Mostrando una vez más lo visto en el EDA: La supremacia de las conexiones 4G, seguidas por conexiones tipo wireless y telefonia fija.<br>
@@ -42,7 +43,8 @@ Se aprecia una comparación en el efecto de cada acceso de velocidad de bajada d
 
 <p align="center">
 <img src=imagenes\Kpi.png >
-</p><br>
+</p>
+<br>
 
 Viendo los datos y la distribución respecto a ubicaciones me pareció que lo mejor era ir con KPIs que incentiven la mejora tecnológica y el alcance del internet en el país.<br>
 El primer KPI siguiendo la mejora tecnológica es llegar a una mayor media (promedio) de Mbps en el país. Para la siguiente meta se le suma un 50% del valor actual.<br>
