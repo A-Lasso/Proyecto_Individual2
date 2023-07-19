@@ -31,7 +31,7 @@ Carpeta que contiene imagenes que se utilizan en "EDA.ipynb", estas son graficos
 ## Dashboard
 
 <p align="center">
-<img src=imagenes\dashboard.png >
+<img src=Imagenes\dashboard.png >
 </p>
 <br>
 
@@ -42,7 +42,7 @@ Se aprecia una comparación en el efecto de cada acceso de velocidad de bajada d
 ### KPI's
 
 <p align="center">
-<img src=imagenes\Kpi.png >
+<img src=Imagenes\Kpi.png >
 </p>
 <br>
 
