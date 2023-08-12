@@ -7,6 +7,11 @@ El internet, por su parte, es una red global de computadoras interconectadas que
 
 En este contexto, una empresa prestadora de servicios de telecomunicaciones me encargó la realización de un análisis completo que permita reconocer el comportamiento de este sector a nivel nacional. Consideremos que la principal actividad de la empresa es brindar acceso a internet, pero también es importante ver el comportamiento asociado al resto de los servicios de comunicación, con el fin de orientar a la empresa en brindar una buena calidad de sus servicios, identificar oportunidades de crecimiento y poder plantear soluciones personalizadas a sus posibles clientes.
 
+# **Tecnologías**
+Se utilizo:<br>
+- Python. Librerias: pandas, numpy, request, matplotlib.pyplot, seaborn y pandas_profiling(ProfileReport).
+- Mysql. Creación y relación de las tablas para conectar a Power BI.
+
 ## **ETL.ipynb**
 En este archivo se encuentra la importación de los csv desde la API, la limpieza de los datos de cada dataset traido por la API, la creación de nuevos dataset para más adelante la relación entre estos.<br>
 Con la creación de los csv que contienen los id de cada lugar, se creo en cada dataset (que tuviera justamente columnas de categorias de lugares ) un id representando cada lugar y luego se eliminaron las columnas que tenian los valores en string.<br>
