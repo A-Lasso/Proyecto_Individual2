@@ -36,7 +36,17 @@ Carpeta que contiene imagenes que se utilizan en "EDA.ipynb", estas son graficos
 ## Dashboard
 
 <p align="center">
+<img src=Imagenes\Presentacion.png >
+</p>
+<br>
+
+<p align="center">
 <img src=Imagenes\dashboard.png >
+</p>
+<br>
+
+<p align="center">
+<img src=Imagenes\Analisis.png >
 </p>
 <br>
 
